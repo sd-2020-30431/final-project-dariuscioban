@@ -1,6 +1,6 @@
 package midi;
 
-public class Note {
+public class Note implements Comparable<Note>{
 	private int frequency;
 	private int duration;
 	private int startTime;
@@ -33,5 +33,9 @@ public class Note {
 	
 	public int getStartTime() {
 		return startTime;
+	}
+	
+	public int compareTo(Note other) {
+		return this.startTime - other.startTime;
 	}
 }
